@@ -1,0 +1,125 @@
+*, *::after, *::before{
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body{
+    background: linear-gradient(to right, #00AB, #00AAFF, #00FF6C);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.clock{
+    width: 400px;
+    height: 400px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    border: 4px solid black;
+    position: relative;
+}
+
+.clock .number {
+    --rotation: 0; 
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transform: rotate(var(--rotation));
+    font-size: 2rem;
+}
+
+.clock .tick{
+    --rotation: 0; 
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transform: rotate(var(--rotation));
+    font-size: 0.8rem;
+}
+
+.clock .n12 {--rotation: 375deg}
+.clock .number1 { --rotation: 30deg}
+.clock .n1 {--rotation: 45deg}
+.clock .number2 { --rotation: 60deg}
+.clock .n2 {--rotation: 75deg}
+.clock .number3 { --rotation: 90deg}
+.clock .n3 {--rotation: 105deg}
+.clock .number4 { --rotation: 120deg}
+.clock .n4 {--rotation: 135deg}
+.clock .number5 { --rotation: 150deg}
+.clock .n5 {--rotation: 165deg}
+.clock .number6 { --rotation: 180deg}
+.clock .n6 {--rotation: 195deg}
+.clock .number7 { --rotation: 210deg}
+.clock .n7 {--rotation: 225deg}
+.clock .number8 { --rotation: 240deg}
+.clock .n8 {--rotation: 255deg}
+.clock .number9 { --rotation: 270deg}
+.clock .n9 {--rotation: 285deg}
+.clock .number10 { --rotation: 300deg}
+.clock .n10 {--rotation: 315deg}
+.clock .number11 { --rotation: 330deg}
+.clock .n11 {--rotation: 345deg}
+
+/*.clock .hand{
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    height: 50%;
+    border: 1px solid white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transform-origin: bottom;
+    z-index: 10; 
+} */
+
+.clock::after{
+    content: '';
+    position: absolute;
+    background-color: black;
+    z-index: 10;
+    width: 25px;
+    height: 25px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50% ; 
+}
+
+
+#hour, #min, #sec{
+    --rotation: 0;
+    position: absolute;
+    background-color: black;
+    border-radius: 10px;
+    transform-origin: bottom;
+}
+
+#hour{
+    width: 2.5%;
+    height: 35%;
+    top: 17.5%;
+    left: 49.8%;
+
+
+}
+
+#min{
+    width: 1.7%;
+    height: 40%;
+    top: 11.5%;
+    left: 49.7%;
+
+}
+
+#sec{
+    width: 1%; 
+    height: 45%;
+    top: 6%;
+    left: 49.7%;
+    background-color: red;
+
+}
